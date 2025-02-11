@@ -6,6 +6,7 @@ RUN yarn install --frozen-lockfile
 FROM base AS dev
 COPY . /app
 COPY . .
+RUN ls /app
 RUN yarn build
 
 FROM base AS prod
