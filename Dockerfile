@@ -1,7 +1,7 @@
 FROM gcr.io/distroless/nodejs22-debian12 AS base
 WORKDIR /app
 COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+RUN yarn install
 
 FROM base AS dev
 COPY . /app
