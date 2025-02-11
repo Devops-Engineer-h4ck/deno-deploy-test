@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import type React from "react"
+import Avvvatars from "avvvatars-react";
 
 interface Comment {
     postId: number
@@ -125,7 +126,7 @@ export const FuturisticPostMainCard: React.FC<{ post: Post, isLink: boolean }> =
                             View Error Page
                         </Link>
                         <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded"></div>
-                        
+
                     </div>
                 </div>
             )}
@@ -153,8 +154,15 @@ export const FuturisticPostCommentCard: React.FC<{ comment: Comment }> = ({ comm
             className="bg-black/90 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg border-2 border-gray-700 hover:border-cyan-500 transition duration-300"
         >
             <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-glow">
-                    {name.charAt(0)}
+                <div className="w-fit h-fit rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-glow *:bg-gradient-to-br/from-indigo-500/to-purple-600">
+                    <Avvvatars
+                        value={email+name+id}
+                        style="shape"
+                        radius={50}
+
+                        border={true}
+                        size={80}
+                    />
                 </div>
                 <div>
                     <h3 className="font-semibold text-indigo-300">{name}</h3>
