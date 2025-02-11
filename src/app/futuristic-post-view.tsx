@@ -99,7 +99,7 @@ export const FuturisticPostMainCard: React.FC<{ post: Post, isLink: boolean }> =
     return (
         <>
             {isLink ? (
-                <Link href={`/todo/${id}`} key={id} className="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg border-2 border-gray-700 hover:border-indigo-500 transition duration-300">
+                <Link href={`/todo/${id}`} key={id} className="bg-black/50 bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg border-2 border-gray-700 hover:border-indigo-500 transition duration-300">
                     <h1 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 shadow-text">
                         {title}
                     </h1>
@@ -113,7 +113,7 @@ export const FuturisticPostMainCard: React.FC<{ post: Post, isLink: boolean }> =
                     </div>
                 </Link>
             ) : (
-                <div key={id} className="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg border-2 border-gray-700 hover:border-indigo-500 transition duration-300">
+                <div key={id} className="bg-black/50 bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg border-2 border-gray-700 hover:border-indigo-500 transition duration-300">
                     <h1 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 shadow-text">
                         {title}
                     </h1>
@@ -151,7 +151,7 @@ export const FuturisticPostCommentCard: React.FC<{ comment: Comment }> = ({ comm
     return (
         <div
             key={id}
-            className="bg-black/90 backdrop-filter backdrop-blur-lg rounded-xl p-4 shadow-lg border-2 border-gray-700 hover:border-cyan-500 transition duration-300"
+            className="bg-black/50 backdrop-filter backdrop-blur-lg rounded-xl p-4 shadow-lg border-2 border-gray-700 hover:border-cyan-500 transition duration-300"
         >
             <div className="flex flex-col sm:flex-row xl:flex-row md:flex-row items-center space-x-4 mb-4">
                 <div className="w-fit h-fit rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-glow *:bg-gradient-to-br/from-indigo-500/to-purple-600">
