@@ -151,9 +151,9 @@ export const FuturisticPostCommentCard: React.FC<{ comment: Comment }> = ({ comm
     return (
         <div
             key={id}
-            className="bg-black/90 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg border-2 border-gray-700 hover:border-cyan-500 transition duration-300"
+            className="bg-black/90 backdrop-filter backdrop-blur-lg rounded-xl p-4 shadow-lg border-2 border-gray-700 hover:border-cyan-500 transition duration-300"
         >
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="flex flex-col sm:flex-row xl:flex-row md:flex-row items-center space-x-4 mb-4">
                 <div className="w-fit h-fit rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-glow *:bg-gradient-to-br/from-indigo-500/to-purple-600">
                     <Avvvatars
                         value={email+name+id}
@@ -165,8 +165,8 @@ export const FuturisticPostCommentCard: React.FC<{ comment: Comment }> = ({ comm
                     />
                 </div>
                 <div>
-                    <h3 className="font-semibold text-indigo-300">{name}</h3>
-                    <p className="text-sm text-gray-400">{email}</p>
+                    <h3 className="font-semibold text-slate-300 text-sm">{name}</h3>
+                    <p className="text-base text-sky-500">{email}</p>
                 </div>
             </div>
             <p className="text-gray-300">{body}</p>
